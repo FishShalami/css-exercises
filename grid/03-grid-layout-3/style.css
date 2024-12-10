@@ -28,7 +28,7 @@
   background-color: #393f4d;
   display:grid;
   grid-area: header;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 5fr;
 }
 
 .logo {
@@ -41,10 +41,9 @@
   font-size: 16px;
   list-style: none;
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   justify-items: end;
-  align-items: center;
+  align-items: flex-end;
 
 }
 
@@ -63,7 +62,7 @@
   font-weight: normal;
   border-radius: 10px;
   display: grid;
-  align-items: center ;
+  align-items: center;
 }
 
 
@@ -73,7 +72,7 @@
   font-size: 16px;
   font-weight: normal;
   display: grid;
-  align-items: center ;
+  align-items: center;
   
 }
 
