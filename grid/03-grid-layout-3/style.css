@@ -5,6 +5,15 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer";
+  gap: 4px;
 }
 
 .container div {
@@ -17,15 +26,34 @@
 
 .header {
   background-color: #393f4d;
+  display:grid;
+  grid-area: header;
+  grid-template-columns: 1fr 3fr;
+}
+
+.logo {
+  place-self: start;
+  
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  list-style: none;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, auto);
+  justify-items: end;
+  align-items: center;
+
 }
 
 .sidebar {
   background-color: #C50208;
+  display: grid;
+  gap: 50px;
+  grid-area: sidebar;
+  
 }
 
 .sidebar .photo {
@@ -34,6 +62,8 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: grid;
+  align-items: center ;
 }
 
 
@@ -42,19 +72,38 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: grid;
+  align-items: center ;
+  
+}
+
+.nav ul {
+  display: contents; /* Removes the <ul> as a layout element */
 }
 
 .nav {
   background-color: #C50208;
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: center;
+
 }
 
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
+  list-style: none; 
+  
 }
 
 .article {
   background-color: #bccbde;
+  grid-area: article;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .article p {
@@ -68,6 +117,11 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  row-gap: 20px;
 }
 
 .card p {
@@ -83,9 +137,11 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: footer;
 }
 
 .footer p {
   font-size: 13px;
   font-weight: normal;
+  
 }
