@@ -28,7 +28,7 @@
   background-color: #393f4d;
   display:grid;
   grid-area: header;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 2fr;
 }
 
 .logo {
@@ -36,15 +36,21 @@
   
 }
 
+.menu {
+  align-self: center;
+}
+
+.menu ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
 .menu ul,
 .menu li {
   font-size: 16px;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-items: end;
-  align-items: flex-end;
-
+  
 }
 
 .sidebar {
@@ -77,16 +83,18 @@
 }
 
 .nav ul {
-  display: contents; /* Removes the <ul> as a layout element */
+  /* display: contents;  */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .nav {
   background-color: #C50208;
-  grid-area: nav;
+  /* grid-area: nav;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  text-align: center;
+  text-align: center; */
 
 }
 
