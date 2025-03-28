@@ -26,8 +26,8 @@
 
 .header {
   background-color: #393f4d;
-  display:grid;
   grid-area: header;
+  display:grid;
   grid-template-columns: 1fr 2fr;
 }
 
